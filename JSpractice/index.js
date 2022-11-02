@@ -38,14 +38,118 @@
 // makeFunc()
 
 
-function makeAdder(x) {
-  return function (y) {
-    return x + y;
-  };
-}
+// function makeAdder(x) {
+//   return function (y) {
+//     return x + y;
+//   };
+// }
 
-const add5 = makeAdder(5);
-const add10 = makeAdder(11);
+// const add5 = makeAdder(5);
+// const add10 = makeAdder(11);
 
-console.log(add5(2));
-console.log(add10(2)); 
+// console.log(add5(2));
+// console.log(add10(2)); 
+
+
+
+// function x(){
+//   var  i = 1;
+//   setTimeout(function (){
+//     console.log(i);
+//   }, 1000);
+// }
+// x();
+
+
+// function x(){
+//   for(var i=0; i<=5; i++){
+//     setTimeout(() => {
+//       console.log(i)
+//     }, 1000);
+//   }
+//   console.log("prabhat")
+// }
+// x();
+
+
+// function x(){
+//   for(var i=0; i<=5; i++){
+//     function close(x){
+//       setTimeout(() => {
+//         console.log(x);
+//       }, x*1000);
+//     }
+//     close(i);
+//   }
+//   console.log("prabhat")
+// }
+// x()
+
+
+// //first class citizens example
+// const func = function (){
+//   console.log("This is first class function which is store in variable ")
+// }
+
+// func()
+
+
+// function hello (add){
+//   add()
+// }
+
+// hello(function (){ console.log("This is call in higher order function")})
+
+
+
+// function hello(){
+//   return function() {
+//     return "hello world"
+//   }
+// }
+
+// var hi=hello()
+// console.log(hi())
+
+
+
+// //pure impure function
+
+// // function getval(num){
+// //   return num
+// // }
+// // console.log(getval(10))
+
+// //impure function 
+// function getval(){
+//   return Math.floor(Math.random()*1000)
+// }
+// console.log(getval())
+// console.log(getval())
+// console.log(getval())
+// console.log(getval())
+
+
+// setInterval(function (){
+//   console.log(new Date())
+// } , 1000)
+
+
+
+// //tell the output
+
+// console.log("first");
+
+// setTimeout(function (){
+//   console.log("calling");
+// }, 2000)
+
+// setTimeout(function (){
+//   console.log("calling again");
+// }, 5000)
+
+// let i=0;
+// while(i<= 10){
+//   console.log("second" , i); //output --> first , second , calling , calling again
+//   i++
+// }
