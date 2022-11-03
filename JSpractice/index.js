@@ -153,3 +153,37 @@
 //   console.log("second" , i); //output --> first , second , calling , calling again
 //   i++
 // }
+
+
+ //======= CALLBACK -=======
+
+//  function Atmachine(){
+//   console.log("entering the user pin");
+//   let userEnteredpin = 1234;
+//   console.log("user enter the pin" , userEnteredapin);
+//   let originalPin;
+//   setTimeOut(function(){
+//     originalPin =1234;
+//     console.log("getting the pin from db" , originalPin);
+//     if(userEnteredpin === originalPin) console.log("enter the amount")
+//     else console.log("invalid pin")
+//   }, 2000)
+//  }
+
+// Atmachine()
+
+
+
+//======arrray========
+
+// let num = [ 10 , 15];
+// let copy = num;
+
+// console.log(num ,  copy);//[10 , 15] [10 , 15]
+
+// copy[0] = 12;
+//  console.log(num , copy); // [12 , 15] [12 , 15]
+
+
+console.log("raM"=== "raMm")
+
