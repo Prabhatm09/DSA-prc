@@ -1,25 +1,21 @@
 //debouncing in js
 
-let counter = 1;
-const getData = () => {
-    console.log("fetching" , counter++);
+let count = 1;
+const getData = () =>{
+    console.log("fetching" , count++)
 };
 
-const debounce = function(fn , delay) {
+const debounce = (fn , d) => {
     let timer;
-    return function () {
-        let context = this,
-        arg = arguments
-          clearTimeout(timer)
-          timer = setTimeout (()=> {
-            getData.apply(context  , arguments)
-        } , delay)
+    return function (){
+clearTimeout(timer)
+     timer =    setTimeout(()=> {
+            getData()
+        } , d)
     }
-} 
+}
 
-const Bettertime = debounce(getData , 300)
-
-
+let bettrtime = debounce(getData , 300)
 
 
 
