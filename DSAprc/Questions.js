@@ -150,4 +150,102 @@ if(word1.split("").sort().join() === word2.split("").sort().join()){
     console.log("not a anagram")
 }
 
+//factpry method function - any function  creating object
 
+function createCircular (radius){
+    return {
+    radius : radius,
+    draw :  function (){
+        console.log( "drawing circle")
+    }
+    }
+}
+
+let circle1 = createCircular(10);
+console.log(circle1.radius)
+
+
+//constructor method
+
+function Circle(radius){
+    this.radius = radius;
+    this.draw = function (){
+        return "drawing circle"
+    }
+    return this;
+}
+
+
+let circle2 = new Circle(10);
+console.log(circle2 , circle2.draw())
+
+
+//creating by this way also// using new keyword everything store in as a object
+
+let num = 10;
+// ---> this hapen behind the scene of js storing the variable;
+let num1 = new Number(10);
+
+
+let string = "prabhat";
+let string1 = new String("pravhat")
+
+
+
+let car = {
+    car : "BMW",
+    model : "Q3",
+    year : 2021,
+    type: "suv"
+}
+
+for(let key  in  car){
+    console.log(key)
+}
+
+let carObj = Object.key(car);
+console.log(carObj)
+
+
+
+let array = [
+    [1,2],
+    [3,4],
+    [
+        [[7 , "vasu"], 9],
+        [9,10],
+    ],
+]
+
+console.log(array.flat(4))
+
+
+
+
+//call by refrence
+
+let arrNum = [1,2,3,4];
+function change(value){
+    console.log(arrNum , value);
+    arrNum[0] = 10;
+    console.log(arrNum , value)
+}
+
+change(arrNum)
+
+
+//sort the object
+
+let object = {
+    name : "prabhat",
+    age : 10,
+    place : "lucknow"
+}
+
+let sortedKey = Object.keys(object).sort();
+let sortedObj = {};
+for(let key of sortedKey){
+    sortedObj[key] = object[key]
+}
+
+console.log("sorted object " , sortedObj)
