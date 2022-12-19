@@ -184,7 +184,7 @@ console.log(circle2 , circle2.draw())
 
 let num = 10;
 // ---> this hapen behind the scene of js storing the variable;
-let num1 = new Number(10);
+let numarr = new Number(10);
 
 
 let string = "prabhat";
@@ -249,3 +249,82 @@ for(let key of sortedKey){
 }
 
 console.log("sorted object " , sortedObj)
+
+
+
+
+//array destructing
+
+let number = [1,2,3,56,7];
+let [numss , num2 , ...rest] = nums;
+console.log(numss , num2 , rest);
+
+
+let number1 =  [1,2]
+let [nums1 , nums2 , num3] = nums;
+
+
+//object destructing
+
+let objectt = {
+    fname: "prasbhat",
+    class : "engineering",
+    pro : "developer"
+}
+
+let {fname , classs} = obj;
+console.log(fname , classs)
+
+
+
+//recursion
+
+let numb = [1,2,3,5 ,4,5];
+
+function number(arr){
+    if(arr.length == 1){
+        return arr[0]
+    }
+     return arr.shift()+number(arr)
+}
+
+console.log(numb)
+
+
+//find the sum of given range
+
+function sum(first , last){
+    if(first === last){
+        return 0;
+    }
+
+    return first+sum(first+1 , last)
+}
+console.log(sum(3,10))
+
+
+//power
+
+function getPower(base , exponential){
+    if(exponential == 0 ) return 1;
+    return base * getPower(base , exponential-1)
+}
+console.log(getPower(2 ,4))
+
+
+//flatten array
+
+function flattering(arr){
+let falltenedArray = []
+
+for(let i=0; i<arr.length; i++){
+    if(Array.isArray(arr[i])){
+        falltenedArray = [...falltenedArray , ...flattering(arr[i])]
+    }else{
+        falltenedArray.push(arr[i])
+    }
+    return falltenedArray
+}
+}
+
+console.log(flattering([1, [2,3,45,[3 [3 , 4 ,5]]]]))
