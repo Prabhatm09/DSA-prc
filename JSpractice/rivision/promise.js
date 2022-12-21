@@ -216,9 +216,9 @@ function fn2() {
 // fn1().then(() => fn2())
 //     .then(() => console.log("process over"))
 
-Promise.all([fn1(), fn2()]).then((result) => console.log("pro over", result))
-    .catch((err) => console.log("error", err))
-    .finally(() => console.log("closing"))
+// Promise.all([fn1(), fn2()]).then((result) => console.log("pro over", result))
+//     .catch((err) => console.log("error", err))
+//     .finally(() => console.log("closing"))
 
 
 async function dinnerSecanrio() {
@@ -236,3 +236,23 @@ async function dinnerSecanrio() {
 }
 
 // dinnerSecanrio()
+
+
+console.log("starting");
+
+function p1() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("promise")
+        }, 7000)
+    })
+}
+
+p1()
+
+
+setTimeout(() => {
+    console.log("set time out")
+}, 6000)
+
+console.log("end")
