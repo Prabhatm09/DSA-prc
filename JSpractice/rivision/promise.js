@@ -240,19 +240,47 @@ async function dinnerSecanrio() {
 
 console.log("starting");
 
-function p1() {
-    return new Promise((resolve, reject) => {
+Promise.resolve(1).then(() => console.log("promise"))
+
+function promise() {
+    return new Promise((res, rej) => {
         setTimeout(() => {
-            console.log("promise")
-        }, 7000)
+            console.log("promise 2")
+        }, 4000)
     })
 }
-
-p1()
-
+promise()
 
 setTimeout(() => {
     console.log("set time out")
-}, 6000)
+}, 4000)
 
 console.log("end")
+
+
+//contructor
+
+function Person(name , age){
+    this.name = name;
+    this.age = age;
+
+    console.log(this)
+    //return this --> by default
+}
+
+const vasanth = new Person("prabhat" , 10);
+console.log(vasanth)
+
+new   Promise((res , rej) => {
+    res("sucess!")
+})
+.then(() => {
+    throw Error("oh no!")
+})
+.catch( => {
+    return "actually worked"
+})
+.catch(  error => {
+    console.log(error)
+})
+
