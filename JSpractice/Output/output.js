@@ -137,3 +137,148 @@ let a4 = 10;
 var a5 = 20;
 console.log(a4, a5)
 
+//23)
+let array1 = [];
+let array2 = [];
+console.log(array1 == array2) // false
+console.log(array1 == array2) // false
+
+//24)
+let array3 = [];
+let array4 = array3
+console.log(array3 == array4) // true
+console.log(array3 == array4) // true
+
+
+//25)
+let array5 = [20]
+let array6 = [20]
+console.log(array5[0] == array6[0]) // true
+console.log(array5[0] == array6[0]) // true
+//bcz element are compare here not address
+
+//26)
+let z = [1,2,3,4,5,6]
+let name = {name : "prabhat"}
+console.log(...z) // 1,2,3,4,5,6
+
+//27)
+console.log(typeof NaN) // number
+
+//28)
+let data = 10 - -10;
+console.log(data)//20
+
+//29)
+const set = new Set([1,1,3,4,5]); //work of set remove dublicate value
+console.log(set)// 1 ,3,4,5
+
+//30)
+let data1 = {name : "prabhat"};
+console.log(delete data1.name) //true
+
+//31) 
+let data2 = {name : "prabhat"};
+console.log(delete data2) //false bcz we cant delete data directly
+
+//32)
+const data3 = ["peter" , "prabhat" , "ram"];
+const [y,zz] = data3;
+console.log(y , zz)  //peter , prabaht
+  
+//33) to find the 2nd element from array
+const data4 = ["peter" , "prabhat" , "ram"];
+const [,z1] = data4;
+console.log( z1)  // prabaht
+
+//34) how to get any property from obj without .operator
+const data5 = {name : "ram" , age: 23 , skill:"js"}
+const {age} = data5
+console.log(age)
+
+//35)how to merge two object
+let data6 = {name : "ram" , age: 23 , skill:"js"}
+let info = {city : "noida"};
+data6 = {...data6 , ...info};
+console.log(data6)
+
+//36)how to merge two object
+let dat7 = {name : "ram" , age: 23 , skill:"js"}
+let info1 = {city : "noida"};
+data7 = {data7 , ...info1}; 
+console.log(data7) // {data7:{name : "ram" , age: 23 , skill:"js"}  , city : "noida"}
+
+//37) if same key in two object
+let dat8 = {name : "ram" , age: 23 , skill:"js"}
+let info2 = {city : "noida" , skill : "python"};
+data8 = {data8 , ...info1}; 
+console.log(data8) // {name : "ram" , age: 23 , skill : "python" , city : "noida" }
+
+ //38)
+ const name1 = "prabhat";
+ console.log(name1())//error
+
+ //39)
+ const result = false || {} || null
+ console.log(result) // object bcz OR operator find first true value
+
+ //40)
+ const result1 = false || null || "" 
+ console.log(result1)//empty string bcz no value is true it take last value
+
+ //41)
+ const result2 = [] || 0 || true 
+ console.log(result2)//[]
+
+ //42)
+ console.log(Promise.resolve(5))//promise fullfilled
+
+ //43)
+ console.log("emoji" === "emoji")//true
+
+ //44)
+ JSON.parse()//convert  json into js value
+
+ //45)
+ console.log(`${(x=>x)("i love program")}`)// i love program
+
+ //46)
+ const string = "code by me"
+ console.log(!typeof string === "object")//false
+ console.log(!typeof string === "string")//false 
+
+ //47)
+ const name2 = "sub";
+ const age1 = 21
+ console.log(isNaN(name2))//true
+ console.log(isNaN(age))//false
+
+ //48)
+ let person1 = {name:"prabhat"}
+ Object.seal(person1)//seal can allow to change the key which is alrdy in object  not allow to add new things
+ person1.name = "mishra"
+ console.log(person1)
+
+ //49)convert string to boolean
+let data9 = "true"
+console.log(!data9) //false
+
+//50)
+let arr1 = [1,2,3,4]
+let aar2 = [4 ,5,6]
+let c = [...arr1 , ...aar2]
+console.log(c)//[1,2,3,4,4,5,6]
+
+
+//51)
+let a5 = "like";
+let b3 =  `like`
+console.log(a5 === b3)//true
+
+
+  
+
+
+
+
+
