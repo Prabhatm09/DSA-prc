@@ -255,7 +255,7 @@ console.log(data8) // {name : "ram" , age: 23 , skill : "python" , city : "noida
 
  //48)
  let person1 = {name:"prabhat"}
- Object.seal(person1)//seal can allow to change the key which is alrdy in object  not allow to add new things
+ Object.seal(person1)//seal can allow to change the key which is alrdy in object  not allow to add new thi ngs
  person1.name = "mishra"
  console.log(person1)
 
@@ -275,10 +275,102 @@ let a5 = "like";
 let b3 =  `like`
 console.log(a5 === b3)//true
 
+//52)
+let apple = 1;
+let cat = 2;
+console.log(--cat === apple) //true
 
-  
+//53)
+let apple1 = 1;
+let ball = 1;
+let cat1 = 2;
+console.log ( apple1 === ball ===  --cat ) //false
+
+//54)
+console.log(3*3)//9
+console.log(3**3)//27
+// console.log(3***3)//error
+
+//55)how to find the OS in js
+// navigator.plateform
 
 
+//56)
+console.log(+true); //by adding + in front of any data it converts in number // 1
+console.log( typeof +true);//number
 
+//57)
+console.log(!"prabhat")//false
+
+//58)
+let data10 = "size";
+const bird = {
+    size : "small"
+}
+console.log(bird[data10])//small
+console.log(bird["size"])//small
+console.log(bird.size)//small
+console.log(bird.data10)//Undefined
+
+//59)
+let c = {name : "peter"};
+let d = c;
+c.name = "prabhat";
+console.log(d.name)//prabhat
+
+//60)
+let e = 3;
+let f = new Number(3)//convert in object
+console.log(e == f)//true 
+console.log( e === f)//false bcz (number === object)
+
+//61)
+ function getAga(...arg){
+    console.log(typeof arg)//object
+ }
+ getAga(21)//[21]
+
+ //62)
+ const object = {1 : "a" , 2 :"b", 3:"c"}
+ console.log(object.hasOwnProperty("1"))//true
+ console.log(object.hasOwnProperty(1))//true
+
+ //63)
+ for(let i=1; i<5; i++){
+    if(i === 3) continue ;
+    console.log(i) // 1 2 4 
+ }
+
+ //64)
+ function sayHi(){
+    return (()=> 0)() // => 0
+ }
+ console.log(typeof sayHi())//number
+
+ //65)
+ function sayHi(){
+    return (()=> 0) // => 0
+ }
+ console.log(typeof sayHi())//functiom
+
+ //66)
+ console.log(typeof typeof 1)//string
+
+ //67)
+ const number = [1,2,3]
+ number[9] = number
+ console.log(number)//infinite
+
+ //68)
+ (()=>{
+    let x = y = 10
+ })()
+ console.log(typeof y)//number
+   
+ //69)
+ console.log(!true - true);//(0-1)==> -1
+
+//70)
+console.log(true + +"10")// //(1+10)=> 11
 
 
